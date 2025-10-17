@@ -315,3 +315,14 @@ Progress update: I added NextAuth, created the API route, wrapped the app with S
 Ran terminal command: npm run dev --silent
 
 Made changes.
+
+----
+
+## Me
+
+There are manual steps I would need to complete on GitHub to allow my app to have single-sign-on. 
+
+Create a `.env` file for me to hold any relevant secrets. Then walk me through those manual steps.
+
+## AI
+
