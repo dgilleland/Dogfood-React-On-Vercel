@@ -68,3 +68,24 @@ If you add a database adapter (Prisma, TypeORM, etc.) add `DATABASE_URL` (and an
 - [ ] Redeploy and test sign-in
 
 If you'd like, I can add a `signIn` callback example in `pages/api/auth/[...nextauth].js` to restrict sign-ins to a GitHub org, or help you wire a database adapter for persistent users. Tell me which next step you prefer.
+
+Local testing helper (ngrok)
+--------------------------------
+
+This repo includes a small PowerShell helper to start ngrok and the Next.js dev server on Windows. It requires `ngrok` to be installed and available on your PATH.
+
+Commands:
+
+  npm run dev:ngrok
+
+What it does:
+- Starts `ngrok http 3000` and the Next dev server.
+- Copy the HTTPS ngrok forwarding URL and add it as an Authorization callback URL in your GitHub OAuth App (e.g. `https://abcd1234.ngrok.io/api/auth/callback/github`).
+
+If you prefer not to use the script, run these commands manually in separate shells:
+
+PowerShell:
+
+  ngrok http 3000
+  npm run dev
+
